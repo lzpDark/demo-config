@@ -1,6 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+---
 server:
   port: 4000
 
 spring:
+  profiles: dev
   application:
-    name: config
+    name: config-dev
+
+
+---
+server:
+  port: 4001
+spring:
+  profiles: online
+  application:
+    name: config-online
